@@ -41,10 +41,6 @@ async function handleFile(file) {
 
 		const json = JSON.parse(userComment);
 
-		console.log(json)
-
-
-
 		if (json.workflow) {
 			await this.loadGraphData(json.workflow)
 		} else if (json.prompt) {
