@@ -2,6 +2,7 @@
 
 
 Adds a custom node for saving images in webp, jpeg, avif, jxl (no metadata)
+And supports loading workflows from saved images
 
 Metadata is saved in UserComment(0x9286) field of Images,
 
