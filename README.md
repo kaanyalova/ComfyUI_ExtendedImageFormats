@@ -19,7 +19,7 @@ Its formatted as
 
 
 ## Installation
-Clone the repo inside your `custom_nodes` folder
+Clone the repo inside your `custom_nodes` folder of ComfyUI
 ```
 git clone https://github.com/kaanyalova/ComfyUI_ExtendedImageFormats
 ```
