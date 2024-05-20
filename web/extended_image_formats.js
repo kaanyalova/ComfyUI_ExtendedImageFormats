@@ -35,7 +35,7 @@ async function handleFile(file) {
 		}
 	}
 
-	else if (file.type === "image/avif" || "image/jpeg" || "image/webp" || "image/jxl") {
+	else if (file.type === ("image/avif" || "image/jpeg" || "image/webp" || "image/jxl")) {
 		const parsed = await exifr.parse(file);
 		const userComment = parsed[0x9286];
 
