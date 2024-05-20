@@ -20,17 +20,14 @@ async function handleFile(file) {
 		if (pngInfo) {
 			if (pngInfo.workflow) {
 				this.loadGraphData(JSON.parse(pngInfo.workflow));
-				return;
 			} else if (pngInfo.Workflow) {
 				this.loadGraphData(JSON.parse(pngInfo.Workflow));
-				return; // Support loading workflows from that webp custom node.
+				// Support loading workflows from that webp custom node.
 			} else if (pngInfo.prompt) {
 				this.loadApiJson(JSON.parse(pngInfo.prompt));
-				return;
 			}
 			else if (pngInfo.Prompt) {
 				this.loadApiJson(JSON.parse(pngInfo.Prompt)); // Support loading prompts from that webp custom node.
-				return;
 			}
 		}
 	}
@@ -51,10 +48,6 @@ async function handleFile(file) {
 	}
 
 
-	/*
-	
-	
-	*/
 	else if (file.type === "application/json" || file.name?.endsWith(".json")) {
 		const reader = new FileReader();
 		reader.onload = async () => {
