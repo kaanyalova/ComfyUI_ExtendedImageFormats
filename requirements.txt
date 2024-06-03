@@ -1,0 +1,2 @@
+jxlpy
+pillow-avif-plugin
