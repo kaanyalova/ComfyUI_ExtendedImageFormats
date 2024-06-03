@@ -74,7 +74,7 @@ async function handleFile(file) {
 
 const ext = {
 	// Unique name for the extension
-	name: "Example.LoggingExtension",
+	name: "Comfyui_ExtendedImageFormats",
 	async init(app) {
 		// Any initial setup to run as soon as the page loads
 		app.handleFile = function (file) {
