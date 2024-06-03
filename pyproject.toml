@@ -1,0 +1,14 @@
+[project]
+name = "comfyui_extendedimageformats"
+description = "Adds a custom node for saving images in webp, jpeg, avif, jxl (no metadata) and supports loading workflows from saved images"
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/kaanyalova/ComfyUI_ExtendedImageFormats"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI_ExtendedImageFormats"
+Icon = ""
