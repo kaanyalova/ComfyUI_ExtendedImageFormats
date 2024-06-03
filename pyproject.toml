@@ -9,6 +9,6 @@ Repository = "https://github.com/kaanyalova/ComfyUI_ExtendedImageFormats"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = kaan""
+PublisherId = "kaan"
 DisplayName = "ComfyUI Extended Image Formats"
 Icon = ""
