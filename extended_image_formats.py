@@ -6,6 +6,7 @@ import numpy as np
 from PIL.PngImagePlugin import PngInfo
 import os
 from comfy.cli_args import args
+import imageio
 
 
 avif_supported = False
@@ -89,7 +90,10 @@ class ExtendedSaveImage(SaveImage):
                     pnginfo=metadata,
                     compress_level=self.compress_level,
                 )
-
+            elif format == "dds":
+                # DDS format doesn't support metadata, so we just save the image.
+                imageio.imwrite(os.path.join(full_output_folder, file), np.array(img))  # DDS saving
+                print("DDS format does not support metadata.")
             else:
                 if format == "jxl":
                     print("JXL export doesn't have metadata/import support yet!")
