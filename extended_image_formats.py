@@ -166,8 +166,9 @@ class DDSSaveImage(SaveImage):
             img_array = np.asarray(img)
 
             # DDS file handling
+
             filename_with_batch_num = filename.replace("%batch_num%", str(batch_number))
-            dds_file = f"{filename_with_batch_num}_{counter:05}.dds"
+            file = f"{filename_with_batch_num}_{counter:05}_.dds"
 
             # DDS-specific options
             dds_settings = {
@@ -176,7 +177,7 @@ class DDSSaveImage(SaveImage):
             }
 
             # Use imageio to save the image in DDS format
-            imageio.imwrite(os.path.join(full_output_folder, dds_file), img_array, format='dds', **dds_settings)
+            imageio.imwrite(os.path.join(full_output_folder, file), img_array, format='dds', **dds_settings)
 
             # Prepare metadata for sidecar file
             metadata = {}
@@ -198,9 +199,9 @@ class DDSSaveImage(SaveImage):
                 xmp_data = self.convert_to_xmp(metadata)
                 with open(sidecar_path, 'w') as f:
                     f.write(xmp_data)
-
+            print(file)
             results.append(
-                {"filename": dds_file, "sidecar_file": sidecar_file, "subfolder": subfolder, "type": self.type}
+                {"filename": file, "sidecar_file": sidecar_file, "subfolder": subfolder, "type": self.type}
             )
             counter += 1
 
