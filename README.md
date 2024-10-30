@@ -1,7 +1,7 @@
 # Extended Image Formats for ComfyUI
 
 
-Adds a custom node for saving images in webp, jpeg, avif, jxl (no metadata) and supports loading workflows from saved images
+Adds a custom node for saving images in webp, jpeg, avif, jxl (no metadata), DDS (external metadata) and supports loading workflows from saved images
 
 Metadata is saved in `UserComment(0x9286)` field of Images,
 
