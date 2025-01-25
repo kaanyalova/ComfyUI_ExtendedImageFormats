@@ -2,7 +2,7 @@
 name = "comfyui_extendedimageformats"
 description = "Adds a custom node for saving images in webp, jpeg, avif, jxl (no metadata) and supports loading workflows from saved images"
 version = "1.0.0"
-license = "LICENSE"
+license = { file = "LICENSE" }
 dependencies = ["pillow-avif-plugin", "jxlpy"]
 
 #pillow-avif-plugin`, for jxl support install `jxlpy`
